@@ -1,0 +1,10 @@
+Description: Detect CN IP range and serve from cn-north-1 edge when possible.
+
+--- a/middleware/geo.go
++++ b/middleware/geo.go
+@@ -XX,XX +YY,YY @@
++func GeoAwareCDN(c *gin.Context) {
++    if !isCNIP(c.ClientIP()) { c.Next(); return }
++    c.Header("X-CDN-Edge", "cn-north-1")
++    c.Next()
++}

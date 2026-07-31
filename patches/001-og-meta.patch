@@ -1,0 +1,15 @@
+--- a/web/public/index.html
++++ b/web/public/index.html
+@@ -1 +1,15 @@
+ <head>
+-    <title></title>
+-    <meta name="description" content="OpenAI 接口聚合管理，支持多种渠道包括 Azure，可用于二次分发管理 key。">
++    <title>AllRouter · 25 个模型 · 一个 key</title>
++    <meta name="description" content="Kimi K3, Claude, GPT-5, Gemini, DeepSeek, GLM, Grok at official prices. 一个 OpenAI 兼容 key 串起 25 个前沿模型。">
++    <meta property="og:type" content="website">
++    <meta property="og:url" content="https://allrouter.ai/">
++    <meta property="og:title" content="AllRouter">
++    <meta property="og:image" content="https://allrouter.ai/og-kimi-k3.png">
++    <meta name="twitter:card" content="summary_large_image">
++    <link rel="canonical" href="https://allrouter.ai/">
+ </head>

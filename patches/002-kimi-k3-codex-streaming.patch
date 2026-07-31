@@ -1,0 +1,13 @@
+Description:
+  Fix Codex desktop infinite-retry when using Kimi K3 via AllRouter.
+  
+  Moonshot's native streaming does not emit `event: response.completed`
+  properly. Patch adds synthetic response.completed emission.
+
+--- a/relay/channel/moonshot/adaptor.go
++++ b/relay/channel/moonshot/adaptor.go
+@@ -XX,XX +YY,YY @@
+     if streamData.Usage != nil && streamData.Usage.FinishReason != "" {
++        fmt.Fprintf(w, "event: response.completed\ndata: {\"type\":\"response.completed\",\"id\":\"%s\"}\n\n", streamData.ID)
+         break
+     }
